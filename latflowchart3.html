@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="in">
+<head>
+    <meta charset="UTF-8">
+    <title>lat flowchart3</title>
+</head>
+<body>
+    <h1>Daftar buah yang di beli</h1>
+    <form method="post" onsubmit="return false">
+    <label for="nb">nama buah:</label>
+    <input type="text"id="nb"> <br>
+    <label for="hpk">Harga per kilo:</label>
+    <input type="number"id="hpk"> <br>
+    <label for="jk">jumlah per kilo</label>
+    <input type="number" id="jk"> <br>
+    <button onclick="jumlahbayar()">jumlah pembayaran</button>
+    <p id="output"></p>
+    </form>
+    <script>
+        function jumlahbayar() {
+            let nb = document.getElementById('nb').value;
+            let hpk = parseFloat(document.getElementById('hpk').value);
+            let jk = parseFloat(document.getElementById('jk').value);
+            jk = hpk * jk;
+            let tb = hpk;
+            
+            let diskon = 0 ;
+            if (tb >100000) {
+                diskon = 0.10;
+            } else if (tb > 5000 && tb <= 100000) {
+                diskon = 0.5;
+            }
+            let jumlahdiskon = tb * diskon
+            let hsd = tb - jumlahdiskon;
+            document.getElementById('output').innerHTML =`
+            HASIL :
+            <p> nama buah : ${nb} </p>
+            <p> jumlah : ${jk} kg</p> 
+            <p> harga per kilo : Rp${hpk.toLocaleString('id-ID')}</p>
+            <p> total belanja : Rp${tb.toLocaleString('id-ID')}</p>
+             <p> diskon :${diskon * 100}% (Rp${jumlahdiskon.toLocaleString('id-ID')}</p>
+             <p>harga setelah diskon : Rp${hsd.toLocaleString('id-ID')}</p>
+             `
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengumpulan Tugas</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Bisa menambahkan styling jika diperlukan */
+        .panel {
+            display: none;
+            padding: 10px;
+            background-color: #f1f1f1;
+        }
+        .active {
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome</h1>
+</header>
+
+<section>
+    <nav>
+        <h2>Pengumpulan Tugas Semester 2</h2>
+        <ol>
+            <li><a href="lat1.html">belajar javascript 1</a></li>
+            <li><a href="lat2.html">belajar javascript 2</a></li>
+            <li><a href="latluaspersegi.html">Tugas menghitung Luas Persegi</a></li>
+            <li><a href="latluassegitiga.html">Tugas menghitung Luas Segitiga</a></li>
+            <li><a href="ifmenonton.html">Tugas cek usia penonton</a></li>
+            <li><a href="cekprestasi.html">Tugas cek prestasi</a></li>
+            <li><a href="programcarip&q.html">Tugas program cari p dan q</a></li>
+            <li><a href="fotocopyPR.html">Tugas fotocopy rumah</a></li>
+            <li><a href="nilai.html">Tugas nilai</a></li>
+            <li><a href="seblak.html">Tugas seblak / percabangan</a></li>
+            <li><a href="latihanpengulangan1.html">Tugas pengulangan 1</a></li>
+            <li><a href="latpengulangan2.html">Tugas pengulangan 2</a></li>
+            <li><a href="latpengulangan3.html">Tugas pengulangan 3</a></li>
+            <li><a href="latpengulangan4.html">Tugas pengulangan 4</a></li>
+            <li><a href="pengulangan5.html">Tugas pengulangan 5</a></li>
+            <li><a href="latpengulangan6.html">Tugas pengulangan 6</a></li>
+            <li><a href="latpengulangan7.html">Tugas pengulangan 7</a></li>
+            <li><a href="flowchart.html">lat flowchart</a></li>
+            <li><a href="latflowchart2.html">lat flowchart2</a></li>
+            <li><a href="latflowchart3.html">menghitung belanjaan buah/latflowchart3</a></li>
+            <li><a href="latparameter.html">latihan parameter</a></li>
+        </ol>
+    </nav>
+
+    <article>
+        <h2>About me</h2>
+
+        <button class="accordion">Zaki Nur Faizi</button>
+        <div class="panel">
+            <p>Haloo, perkenalkan saya Zaki Nur Faizi. <br>
+                Saya lahir tanggal 6 Juli 2008. <br>
+            </p>
+        </div>
+
+        <button class="accordion">Sekolah</button>
+        <div class="panel">
+            <p>Saya sekarang sekolah di SMK Negeri 4 Kota Tasikmalaya.</p>
+        </div>
+
+        <button class="accordion">Cita-cita</button>
+        <div class="panel">
+            <p>Saya cita-cita menjadi TNI AD.</p>
+        </div>
+    </article>
+</section>
+
+<footer>
+    <p>Zaki N.F</p>
+</footer>
+
+<script>
+    // Menggunakan forEach untuk efisiensi dalam loop
+    document.querySelectorAll(".accordion").forEach(button => {
+        button.addEventListener("click", () => {
+            button.classList.toggle("active");
+            const panel = button.nextElementSibling;
+            panel.style.display = panel.style.display === "block" ? "none" : "block";
+        });
+    });
+</script>
+
+</body>
+</html>
